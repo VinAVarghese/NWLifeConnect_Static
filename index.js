@@ -1,26 +1,26 @@
 const connect = document.querySelector('#connectSection');
 const nextSteps = document.querySelector('#nextStepsSection');
 const report = document.querySelector('#reportSection');
-const fullName = document.querySelector('#fullName')
+const scrollHere = document.querySelector('#scrollHere')
 
 // Toggling Section Views // 
 const selectConnect = () => {
-    connect.classList.toggle("hidden")
-    nextSteps.setAttribute('class', 'hidden')
-    report.setAttribute('class', 'hidden')
-    fullName.scrollIntoView();
+    connect.classList.toggle("hidden");
+    nextSteps.setAttribute('class', 'hidden');
+    report.setAttribute('class', 'hidden');
+    scrollHere.scrollIntoView({behavior: "smooth"});
 }   
 const selectNS = () => {
-    nextSteps.classList.toggle("hidden")
-    connect.setAttribute('class', 'hidden')
-    report.setAttribute('class', 'hidden')
-    fullName.scrollIntoView();
+    nextSteps.classList.toggle("hidden");
+    connect.setAttribute('class', 'hidden');
+    report.setAttribute('class', 'hidden');
+    scrollHere.scrollIntoView({behavior: "smooth"});
 }   
 const selectReport = () => {
-    report.classList.toggle("hidden")
-    nextSteps.setAttribute('class', 'hidden')
-    connect.setAttribute('class', 'hidden')
-    fullName.scrollIntoView();
+    report.classList.toggle("hidden");
+    nextSteps.setAttribute('class', 'hidden');
+    connect.setAttribute('class', 'hidden');
+    scrollHere.scrollIntoView({behavior: "smooth"});
 }   
 
 // Form Vaildation //

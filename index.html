@@ -11,12 +11,14 @@
     <body>
     <!-- Hero -->
     <header class="hero">
+        <div id="scrollHere"></div>
         <div class="filter"></div>
         <a href="https://nwlife.church/">
             <img class="logo" src="./assets/nwlifelogo.png" alt="logo">
         </a>
     </header>
-
+    <div id="scrollHere"></div>
+    
     <!-- Form -->
     <main class="main container-fluid">
         <div class="row justify-content-center align-items-center">
@@ -24,7 +26,7 @@
                 <form class="needs-validation" novalidate>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="fullName" placeholder="Full Name *" required>
+                        <input type="text" class="form-control" id="name" placeholder="Full Name *" required>
                         <div class="invalid-feedback">
                             Please provide your name.
                         </div>
@@ -110,8 +112,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="moreInfo">How did you hear about NWLife?</label>
-                            <textarea class="form-control" id="moreInfo" rows="3" placeholder="Name of person who invited you, website, church sign, invitation card..."></textarea>
+                            <label for="invitedBy">How did you hear about NWLife?</label>
+                            <textarea class="form-control" id="invitedBy" rows="3" placeholder="Name of person who invited you, website, church sign, invitation card..."></textarea>
                         </div>
                     </div>
 
@@ -122,8 +124,8 @@
                     <div id="nextStepsSection" class="hidden">
                         <div class="form-row">
                             <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="comingHome">
-                            <label class="form-check-label" for="comingHome">
+                            <input class="form-check-input" type="checkbox" id="nextStepRelationship">
+                            <label class="form-check-label" for="nextStepRelationship">
                                 <strong>I'm coming home to relationship with God.</strong>
                             </label>
                             </div>
@@ -142,8 +144,8 @@
                         </div>
                         <div class="form-row">
                             <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="other">
-                            <label class="form-check-label" for="other">
+                            <input class="form-check-input" type="checkbox" id="nextStepOther">
+                            <label class="form-check-label" for="nextStepOther">
                                 <strong>Other:</strong>
                             </label>
                             </div>
@@ -159,8 +161,8 @@
                     </div>
                     <div id="reportSection" class="hidden">
                         <div class="form-group">
-                            <label for="moreInfo">Prayer Request / Praise Report:</label>
-                            <textarea class="form-control" id="moreInfo" rows="3" placeholder="Let us know anything we can keep in prayer and/or praise God with you for..."></textarea>
+                            <label for="pAndPraise">Prayer Request / Praise Report:</label>
+                            <textarea class="form-control" id="pAndPraise" rows="3" placeholder="Let us know anything we can keep in prayer and/or praise God with you for..."></textarea>
                         </div>
                     </div>
 
