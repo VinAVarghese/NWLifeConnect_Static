@@ -1,0 +1,126 @@
+
+/* HERO AREA */
+.hero{
+    background: url("./assets/hero.jpg") 50% no-repeat;
+    background-size: cover;
+    height: 40vh;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 0px 0px 15px 15px;
+}
+.filter{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.335);
+    width: 100%;
+    height: 40vh;
+    border-radius: 0px 0px 15px 15px;
+}
+.logo{
+    position: relative;
+    z-index: 1;
+    max-height: 40vh;
+    max-width: 100vw;
+}
+
+/* MAIN AREA */
+.main{
+    height: 60vh;
+}
+button, button:focus, button:active {
+    border: none;
+    outline-style: none;
+    outline: none;
+}
+.hidden{
+    display: none;
+}
+
+/* FORM */
+.form{
+    margin: 1rem 1rem 0 1rem;
+}
+.headers{
+    position: relative;
+    background-color: #6d92ab;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.headers:hover{
+    background-color: #8bafc7;
+}
+.headers h1{
+    position: relative;
+    text-align: center;
+    margin: 0px;
+    color: white;
+}
+
+#connectSection, #nextStepsSection, #reportSection{
+    margin:0 2rem 0 2rem
+}
+li{
+    font-size: small;
+}
+.rts, .updating{
+    margin-bottom: 16px;
+}
+
+.submit-btn, .submit-btn:focus, .submit-btn:active{
+    background-color: #a7b8a0 ;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+.submit-btn:hover{
+    background-color: #bdd3b4 ;
+}
+
+/* LINKS */
+.links{
+    margin-top: 1rem;
+}
+.tile-size{
+    width: 150px;
+    height: 150px;
+    border: 4px solid #6d92ab;
+    border-radius: 15px;
+    text-decoration: none !important;
+}
+.tile-size h1{
+    position: relative;
+    top:44px;
+    color: #fff;
+    text-shadow: 1px 2px 5px black;
+    text-align: center;
+    margin:0;
+}
+.give-img{
+    background: url("./assets/giving.jpg") 50% no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+.attend-img{
+    background: url("./assets/register.jpg") 50% no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+}

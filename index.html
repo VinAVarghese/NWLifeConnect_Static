@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>NWLife Connect</title>
+</head>
+    <body>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="filter"></div>
+        <a href="https://nwlife.church/">
+            <img class="logo" src="./assets/nwlifelogo.png" alt="logo">
+        </a>
+    </header>
+
+    <!-- Form -->
+    <main class="main container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="form col-md-5">
+                <form class="needs-validation" novalidate>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="fullName" placeholder="Full Name*" required>
+                        <div class="invalid-feedback">
+                            Please provide your name.
+                        </div>
+                    </div>
+
+                    <!-- Connect Section -->
+                    <div onclick=selectConnect() class="headers">
+                        <h1>Connect</h1>
+                    </div>
+                    <div id="connectSection" class="hidden">
+                        <div class="form-row justify-content-center updating">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="updating">
+                            <label class="form-check-label" for="updating">
+                                Updating Contact Information?
+                            </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+                        </div>
+                        <div class="form-row justify-content-center">
+                        <div class="form-group col-md-4">
+                            <label for="apt">Apt.</label>
+                            <input id="apt" class="form-control">
+                            </input>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="zip">Zip</label>
+                            <input type="text" class="form-control" id="zip">
+                        </div>
+                        </div>
+
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="phone">Phone</label>
+                                <input type="text" class="form-control" id="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-5">
+                                <label for="birthday">Birthday</label>
+                                <input type="text" class="form-control" id="birthday" placeholder="MM/DD/YYYY">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label for="age">Age</label>
+                                <select id="age" class="form-control">
+                                <option selected>under 12</option>
+                                <option>12-19</option>
+                                <option>20-29</option>
+                                <option>30-39</option>
+                                <option>40-49</option>
+                                <option>50-59</option>
+                                <option>60+</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-5">
+                                <label for="occupation">Occupation</label>
+                                <input type="text" class="form-control" id="occupation">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label for="attendance">Select One</label>
+                                <select id="attendance" class="form-control">
+                                <option selected>1st time guest</option>
+                                <option>2nd time guest</option>
+                                <option>Regular attender</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="moreInfo">How did you hear about NWLife?</label>
+                            <textarea class="form-control" id="moreInfo" rows="3" placeholder="Name of person who invited you, website, church sign, invitation card..."></textarea>
+                        </div>
+                    </div>
+
+                    <div onclick=selectNS() class="headers">
+                        <h1>Next Steps</h1>
+                    </div>
+                    <div id="nextStepsSection" class="hidden">
+                        <div class="form-row">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="comingHome">
+                            <label class="form-check-label" for="comingHome">
+                                <strong>I'm coming home to relationship with God.</strong>
+                            </label>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>For you are all children of God through faith In Christ Jesus. (Galatians 3.26)</li>
+                            <li>You are members of God's family. (Epheslans 2.19)</li>
+                        </ul>
+                        <div class="form-row rts">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="readyToServe">
+                            <label class="form-check-label" for="readyToServe">
+                                <strong>I'm ready to jump in and serve at NWLife.</strong>
+                            </label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="other">
+                            <label class="form-check-label" for="other">
+                                <strong>Other:</strong>
+                            </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="otherContent" rows="2"></textarea>
+                        </div>
+                    </div>
+
+                    <div onclick=selectReport() class="headers">
+                        <h1>Prayer & Praise</h1>
+                    </div>
+                    <div id="reportSection" class="hidden">
+                        <div class="form-group">
+                            <label for="moreInfo">Prayer Request / Praise Report:</label>
+                            <textarea class="form-control" id="moreInfo" rows="3" placeholder="Let us know anything we can keep in prayer and/or praise God with you for..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                  </form>
+
+            </div>
+
+    <!-- Links -->
+            <div class="links col-md-5 container">
+                <div class="row justify-content-around align-items-center">
+                    <a class="col-5 tile-size give-img" href="https://pushpay.com/g/nwlifechurch?src=hpp">
+                        <h1>Give</h1>
+                    </a>
+                    <a class="col-5 tile-size attend-img" href="http://www.nwlifechurch.com/attend/">
+                        <h1>Attend</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>    
+    <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
