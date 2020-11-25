@@ -45,7 +45,7 @@ button, button:focus, button:active {
 
 /* FORM */
 .form{
-    margin: 1rem 1rem 0 1rem;
+    margin: 2rem 1rem 0 1rem;
 }
 .headers{
     position: relative;
@@ -95,11 +95,13 @@ li{
 
 /* LINKS */
 .links{
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 .tile-size{
-    width: 150px;
-    height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 150px !important;
+    max-height: 150px !important;
     border: 4px solid #6d92ab;
     border-radius: 15px;
     text-decoration: none !important;
@@ -117,17 +119,19 @@ li{
     background-size: cover;
     max-width: 100%;
     max-height: 100%;
+    margin: 10px;
 }
 .attend-img{
     background: url("./assets/register.jpg") 50% no-repeat;
     background-size: cover;
     max-width: 100%;
     max-height: 100%;
+    margin: 10px;
 }
 .toy-img{
     background: url("./assets/toy.jpg") 50% no-repeat;
     background-size: cover;
     max-width: 100%;
     max-height: 100%;
-    margin-top: 16px;
+    margin: 10px;
 }
