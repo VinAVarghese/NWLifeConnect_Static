@@ -104,9 +104,9 @@ li{
     border-radius: 15px;
     text-decoration: none !important;
 }
-.tile-size h1{
+.tile-size h3{
     position: relative;
-    top:44px;
+    top:54px;
     color: #fff;
     text-shadow: 1px 2px 5px black;
     text-align: center;
@@ -123,4 +123,11 @@ li{
     background-size: cover;
     max-width: 100%;
     max-height: 100%;
+}
+.toy-img{
+    background: url("./assets/toy.jpg") 50% no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 16px;
 }
