@@ -114,6 +114,15 @@ li{
     text-align: center;
     margin:0;
 }
+.tile-size .longText{
+    position: relative;
+    top:45px;
+    font-size: x-large;
+    color: #fff;
+    text-shadow: 1px 2px 5px black;
+    text-align: center;
+    margin:0;
+}
 .give-img{
     background: url("./assets/giving.jpg") 50% no-repeat;
     background-size: cover;
@@ -130,6 +139,13 @@ li{
 }
 .toy-img{
     background: url("./assets/toy.jpg") 50% no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 10px;
+}
+.christmas-img{
+    background: url("./assets/christmas.jpg") 50% no-repeat;
     background-size: cover;
     max-width: 100%;
     max-height: 100%;
