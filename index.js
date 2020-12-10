@@ -44,52 +44,39 @@ const selectReport = () => {
 })();
 
 // PHP Function //
-const phpSubmit = () => {
-  let name = document.getElementById('name').value;
-  if(name === "") return console.log("Form post stopped");;
-  let updating = document.getElementById('updating').value;
-  let address = document.getElementById('address').value;
-  let apt = document.getElementById('apt').value;
-  let city = document.getElementById('city').value;
-  let zip = document.getElementById('zip').value;
-  let email = document.getElementById('email').value;
-  let phone = document.getElementById('phone').value;
-  let birthday = document.getElementById('birthday').value;
-  let age = document.getElementById('age').value;
-  let occupation = document.getElementById('occupation').value;
-  let attendance = document.getElementById('attendance').value;
-  let invitedBy = document.getElementById('invitedBy').value;
-  let nextStepRelationship = document.getElementById('nextStepRelationship').value;
-  let readyToServe = document.getElementById('readyToServe').value;
-  let nextStepOther = document.getElementById('nextStepOther').value;
-  let otherContent = document.getElementById('otherContent').value;
-  let pAndPraise = document.getElementById('pAndPraise').value;
+$("#submitPHP").click(function() {
+
+  if($('#name').val() === "") return console.log("Form post stopped");
+  
+  let data = {
+    name : $('#name').val(),
+    updating : $('#updating').val(),
+    address : $('#address').val(),
+    apt : $('#apt').val(),
+    city : $('#city').val(),
+    zip : $('#zip').val(),
+    email : $('#email').val(),
+    phone : $('#phone').val(),
+    birthday : $('#birthday').val(),
+    age : $('#age').val(),
+    occupation : $('#occupation').val(),
+    attendance : $('#attendance').val(),
+    invitedBy : $('#invitedBy').val(),
+    nextStepRelationship : $('#nextStepRelationship').val(),
+    readyToServe : $('#readyToServe').val(),
+    nextStepOther : $('#nextStepOther').val(),
+    otherContent : $('#otherContent').val(),
+    pAndPraise : $('#pAndPraise').val()
+  }
+
   $.ajax({
+    url: "blah.php",
     type: "POST",
-    url: "/index.php",
-    data: { 
-      name : name,
-      updating : updating, 
-      address : address, 
-      apt : apt, 
-      city : city, 
-      zip : zip, 
-      email : email, 
-      phone : phone, 
-      birthday : birthday, 
-      age : age, 
-      occupation : occupation, 
-      attendance : attendance, 
-      invitedBy : invitedBy, 
-      nextStepRelationship : nextStepRelationship, 
-      readyToServe : readyToServe, 
-      nextStepOther : nextStepOther, 
-      otherContent : otherContent, 
-      pAndPraise : pAndPraise
-    },
+    dataType: 'json',
+    data: data,
     success: function (res){
-      console.log(res);
-      res.status(200)
+      alert(res);
+      // res.status(200)
     }
   })
-}
+});
