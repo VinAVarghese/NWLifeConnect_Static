@@ -36,47 +36,9 @@ const selectReport = () => {
             event.preventDefault();
             event.stopPropagation();
           }
-          event.preventDefault();
+          // event.preventDefault();
           form.classList.add('was-validated');
         }, false);
       });
     }, false);
 })();
-
-// PHP Function //
-$("#submitPHP").click(function() {
-
-  if($('#name').val() === "") return console.log("Form post stopped");
-  
-  let data = {
-    name : $('#name').val(),
-    updating : $('#updating').val(),
-    address : $('#address').val(),
-    apt : $('#apt').val(),
-    city : $('#city').val(),
-    zip : $('#zip').val(),
-    email : $('#email').val(),
-    phone : $('#phone').val(),
-    birthday : $('#birthday').val(),
-    age : $('#age').val(),
-    occupation : $('#occupation').val(),
-    attendance : $('#attendance').val(),
-    invitedBy : $('#invitedBy').val(),
-    nextStepRelationship : $('#nextStepRelationship').val(),
-    readyToServe : $('#readyToServe').val(),
-    nextStepOther : $('#nextStepOther').val(),
-    otherContent : $('#otherContent').val(),
-    pAndPraise : $('#pAndPraise').val()
-  }
-
-  $.ajax({
-    url: "blah.php",
-    type: "POST",
-    dataType: 'json',
-    data: data,
-    success: function (res){
-      alert(res);
-      // res.status(200)
-    }
-  })
-});

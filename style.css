@@ -57,10 +57,21 @@ button, button:focus, button:active {
     cursor: pointer;
     transition: all .5s ease-in-out;
 }
+.ty-header{
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-color: #6d92ab;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
 .headers:hover{
     background-color: #8bafc7;
 }
-.headers h1{
+.headers h1, .ty-header h1{
     position: relative;
     text-align: center;
     margin: 0px;
